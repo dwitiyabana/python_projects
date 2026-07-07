@@ -1,7 +1,12 @@
-username=input("enter the username (must be under 12 characters, no spaces, no digits)")
-if not username.find(" ")==-1:
-    print("the username cant have spaces")
-elif username.isalpha and len(username)<=12:
-    print("the username is correct")
-else:
-    print("wrong")
+#python compund interest calculator
+p=float(input("enter the principle amount : "))
+while p<=0:
+    p=float(input("the principle amount cant be zero or negative enter again"))
+r=float(input("enter the rate of interestrate of interest : "))
+while r<=0:
+    r=float(input("the rate of interest be zero or negative enter again : "))
+t=int(input("enter the years"))
+while t<=0:
+    t=int(input("the time cant be zero or less than zero enter again : "))
+a=p*(1+(r/100))**t
+print(f"the compund interest is {a:.2f}")
