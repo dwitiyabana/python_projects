@@ -1,12 +1,8 @@
-#python compund interest calculator
-p=float(input("enter the principle amount : "))
-while p<=0:
-    p=float(input("the principle amount cant be zero or negative enter again"))
-r=float(input("enter the rate of interestrate of interest : "))
-while r<=0:
-    r=float(input("the rate of interest be zero or negative enter again : "))
-t=int(input("enter the years"))
-while t<=0:
-    t=int(input("the time cant be zero or less than zero enter again : "))
-a=p*(1+(r/100))**t
-print(f"the compund interest is {a:.2f}")
+#clock countdown timer code
+import time
+x=int(input("enter time in seconds"))
+seconds=x/60
+minutes=x roz maid se kam krwao kapde dhone and then khana banao ya boring akele gaane suno bss will be over
+for a in range(x,0,-1):
+    time.sleep(1)
+    print(f"the time is 00:{minutes:02}:{a:02}")
