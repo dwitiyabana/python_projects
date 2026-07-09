@@ -1,4 +1,4 @@
-#clock countdown timer code
+#basic clock countdown timer code
 import time
 x=int(input("enter time in seconds"))
 for a in range(x,0,-1):
