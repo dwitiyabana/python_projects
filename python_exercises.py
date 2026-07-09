@@ -1,8 +1,6 @@
-#rectangle printing
+#right angle triangle printing
 length=int(input("enter the length"))
-breadth=int(input("enter the breadth"))
-for x in range (breadth):
-    for y in range (length):
-        print("*", end=" ")
+for x in range(length):
+    for y in range(x):
+        print("@", end=" ")
     print()
-    
