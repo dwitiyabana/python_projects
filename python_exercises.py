@@ -4,3 +4,4 @@ for x in range(length, 0, -1):
     for y in range(x):
         print("@", end=" ")
     print()
+print("the triangle is above")
