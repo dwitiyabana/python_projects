@@ -5,3 +5,4 @@ for x in range(length, 0, -1):
         print("@", end=" ")
     print()
 print("the triangle is above")
+print("end")
