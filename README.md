@@ -1,1 +1,1 @@
-this file has all the practice programs in python
+this file has all the practice programs in python language
