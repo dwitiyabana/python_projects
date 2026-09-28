@@ -1,25 +1,33 @@
-#concession program
-menu = {"popcorn small":500,
-         "popcorn big":650,
-         "popcorn jumbo":750,
-         "diet coke":100,
-         "ice cream":120}
-cart=[]
-for key, value in menu.items():
-    print(f"the menu is {key}:{value}")
+#Take two numbers and an operator (+, -, *, /) as input. (basic calculator)
+num1=int(input("enter the 1st number"))
+num2=int(input("enter 2nd number"))
 while True:
-    food=input("enter the food you wanna eat (q to quit)").lower()
-    if food == "q":
-        break
-    elif food in menu:
-        cart.append(food)
+    inp=input('''
+_______what fucntion you wanna perform_______
+enter (a) for addition
+enter (s) for subtraction
+enter (d) for division
+enter (m) for multiplication
+enter (p) for power  
+enter (end) to exit
+''')
+    if inp.lower() == 'a':
+        result=num1+num2
+        print(result)
+    elif inp.lower() == 's':
+        result=num1-num2
+        print(result)
+    elif inp.lower() == 'd':
+            result=num1/num2
+            print(result)
+    elif inp.lower() == 'm':
+            result=num1*num2
+            print(result)
+    elif inp.lower() == 'p':
+            result=num1**num2
+            print(result)
+    elif inp.lower() == 'end':
+          break
     else:
-        print("this item is not available")
-total=0
-for food in cart:
-    total +=menu[food]
-print("the items are")
-for food in cart:
-    print(f"{food}:{menu[food]}")
-
-print(f"the total rupees is {total}")   
+          print("enter the correct choice")
+    

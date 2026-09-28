@@ -1,1 +1,2 @@
-print(cart) 
+
+print("the items are")
