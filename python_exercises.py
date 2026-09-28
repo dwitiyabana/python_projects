@@ -1,17 +1,8 @@
-#Take an integer as input and print: Whether it's positive, negative, or zero / Whether it's even or odd
-inp=int(input("enter the number to check Whether it's positive, negative, or zero / Whether it's even or odd "))
-if inp == 0:
-    print("the number is zero")
-elif inp >= 0:
-    print("the number is positive")
-else:
-    print("the number is negative")
-
-if inp==0:
-    print()
-elif inp%2==0:
-    print("the number is even")
-else:
-    print("the number is odd")
-
-    
+#take n as input and calculate sum and avg using loop and logic
+n=int(input("enter the integer to calculate sum and its avg"))   
+sum=0
+for a in range(0,n+1):
+    sum+=a
+print(f"the sum is {sum}")
+avg=sum/n
+print(f"the average is {avg}")
