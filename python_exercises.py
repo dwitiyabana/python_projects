@@ -1,33 +1,17 @@
-#Take two numbers and an operator (+, -, *, /) as input. (basic calculator)
-num1=int(input("enter the 1st number"))
-num2=int(input("enter 2nd number"))
-while True:
-    inp=input('''
-_______what fucntion you wanna perform_______
-enter (a) for addition
-enter (s) for subtraction
-enter (d) for division
-enter (m) for multiplication
-enter (p) for power  
-enter (end) to exit
-''')
-    if inp.lower() == 'a':
-        result=num1+num2
-        print(result)
-    elif inp.lower() == 's':
-        result=num1-num2
-        print(result)
-    elif inp.lower() == 'd':
-            result=num1/num2
-            print(result)
-    elif inp.lower() == 'm':
-            result=num1*num2
-            print(result)
-    elif inp.lower() == 'p':
-            result=num1**num2
-            print(result)
-    elif inp.lower() == 'end':
-          break
-    else:
-          print("enter the correct choice")
+#Take an integer as input and print: Whether it's positive, negative, or zero / Whether it's even or odd
+inp=int(input("enter the number to check Whether it's positive, negative, or zero / Whether it's even or odd "))
+if inp == 0:
+    print("the number is zero")
+elif inp >= 0:
+    print("the number is positive")
+else:
+    print("the number is negative")
+
+if inp==0:
+    print()
+elif inp%2==0:
+    print("the number is even")
+else:
+    print("the number is odd")
+
     
