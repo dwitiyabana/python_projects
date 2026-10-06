@@ -1,30 +1,26 @@
-# String Analyzer
+#random number guessing 
+import random
 
-string1 = input("Enter a string: ")
-
-vowels = ("a", "e", "i", "o", "u")
-
-count_vowels = 0
-count_consonants = 0
-count_digits = 0
-count_spaces = 0
-
-for a in string1.lower():
-
-    if a in vowels:
-        count_vowels += 1
-
-    elif a.isdigit():
-        count_digits += 1
-
-    elif a == " ":
-        count_spaces += 1
-
-    elif a.isalpha():
-        count_consonants += 1
-
-print("Total characters:", len(string1))
-print("Vowels:", count_vowels)
-print("Consonants:", count_consonants)
-print("Digits:", count_digits)
-print("Spaces:", count_spaces)
+lowest_value = 1
+highest_value = 10
+origi_num = random.randint(lowest_value, highest_value)
+guesses=0
+running = True
+while running:
+    a=input(f"enter your guess in between {lowest_value} and {highest_value} ")
+    if a.isdigit():
+        a=int(a)
+        guesses+=1
+        if a>highest_value or a<lowest_value:
+            print(f"enter your guess in between {lowest_value} and  {highest_value} ")
+        elif a>origi_num:
+            print("larger than answer")
+        elif a<origi_num:
+            print("smaller than answer")
+        else:
+            print(f"correct the answer was {origi_num}")
+            print(f"guesses used are {guesses}")
+            running = False
+    else:
+        print("wrong input")
+        print(f"enter your guess in between {lowest_value} and {highest_value} ")
