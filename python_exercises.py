@@ -1,28 +1,26 @@
-#add numbers in linked list which are reveresed
-class Solution:
-    def addTwoNumbers(self, l1, l2):
+#args and kwargs complex code
+def student_report(name, *marks, **details):
 
-        dummy = ListNode(0)
-        current = dummy
-        carry = 0
+    print(f"Student: {name}")
 
-        while l1 or l2 or carry:
+    total = sum(marks)
+    average = total / len(marks)
 
-            x = l1.val if l1 else 0
-            y = l2.val if l2 else 0
+    print(f"Marks: {marks}")
+    print(f"Total: {total}")
+    print(f"Average: {average:.2f}")
 
-            total = x + y + carry
+    print("\nAdditional details:")
 
-            carry = total // 10
-            digit = total % 10
+    for key, value in details.items():
+        print(f"{key}: {value}")
 
-            current.next = ListNode(digit)
-            current = current.next
 
-            if l1:
-                l1 = l1.next
-
-            if l2:
-                l2 = l2.next
-
-        return dummy.next
+student_report(
+    "Dwitiya",
+    85, 92, 78, 88, 95,
+    age=20,
+    branch="CSE",
+    college="BVP",
+    year=2
+)
