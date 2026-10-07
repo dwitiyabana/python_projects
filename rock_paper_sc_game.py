@@ -48,4 +48,4 @@ while match:
         print(f"Computer chose {answer}")
         print("Computer won")
 
-print(f"Score is {score}")
+print(f"final Score is {score}")
