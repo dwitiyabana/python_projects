@@ -1,7 +1,28 @@
-#practice for *args and **kwargs
-def shiping_label(**kwargs):
-    for keys,values in kwargs.items():
-        print(f"{keys} {values}")
-shiping_label(name="dwitiya",
-              mobile="8745486451",
-              area="ghaziabad")
+#add numbers in linked list which are reveresed
+class Solution:
+    def addTwoNumbers(self, l1, l2):
+
+        dummy = ListNode(0)
+        current = dummy
+        carry = 0
+
+        while l1 or l2 or carry:
+
+            x = l1.val if l1 else 0
+            y = l2.val if l2 else 0
+
+            total = x + y + carry
+
+            carry = total // 10
+            digit = total % 10
+
+            current.next = ListNode(digit)
+            current = current.next
+
+            if l1:
+                l1 = l1.next
+
+            if l2:
+                l2 = l2.next
+
+        return dummy.next
